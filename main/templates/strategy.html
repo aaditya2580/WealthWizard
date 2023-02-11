@@ -1,0 +1,274 @@
+<html>
+    <head>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+
+        <style>
+            
+            * {
+                font-family: 'Jost', sans-serif;
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+              }
+              
+              section {
+                width: 100%;
+                min-height: 100vh;
+                background: #3c4053;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding-block: 2rem;
+              }
+              
+              .sec_title {
+                color: #fff;
+                font-size: calc(18px + 28 * ((100vw - 320px) / 980));
+                text-transform: uppercase;
+                text-align: center;
+                padding-bottom: 2rem;
+              }
+              
+              .container {
+                width: 100%;
+                max-width: 70rem;
+                margin: 0 auto;
+                padding: 0 1.5rem;
+              }
+              
+              .accordian-item {
+                background-color: #283042;
+                border-radius: 0.5rem;
+                margin-bottom: 1rem;
+                padding: 1rem;
+                box-shadow: 0.5rem 2px 0.5rem rgba(0, 0, 0, 0.1);
+              }
+              
+              .accordian-link {
+                color: #fff;
+                font-size: calc(16px + 8 * ((100vw - 320px) / 680));
+                text-decoration: none;
+                width: 100%;
+                background-color: #283042;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding-block: 1rem;
+                cursor: pointer;
+              }
+              
+              .answer {
+                overflow: hidden;
+                max-height: 0;
+                position: relative;
+                background-color: #212838;
+                transition: max-height 0.7s;
+              }
+              
+              .answer p {
+                font-size: calc(10px + 6 * ((100vw - 320px) / 680));
+                color: #fff;
+                padding: 1rem;
+              }
+              
+              .answer.open {
+                max-height: 20rem !important;
+                overflow-y: auto;
+              }
+              
+              /*scrollbar width */
+              .answer::-webkit-scrollbar {
+                width: 10px;
+              }
+              
+              /*scrollbar Track */
+              .answer::-webkit-scrollbar-track {
+                background: rgb(189, 190, 189);
+              }
+              
+              .answer::-webkit-scrollbar-thumb {
+                background-color: green;
+                outline: 1px solid darkgreen;
+              }
+              
+              /* footer styling */
+              footer {
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+                background: #283042;
+                padding: 0.5rem;
+                text-align: center;
+                color: #fff;
+                font-size: calc(8px + 6 * ((100vw - 320px) / 680));
+                background: linear-gradient(-75deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+                background-size: 400% 400%;
+                animation: gradient 15s ease infinite;
+              }
+              @keyframes gradient {
+                0%,
+                100% {
+                  background-position: 20% 10%;
+                }
+                20% {
+                  background-position: 40% 20%;
+                }
+                40% {
+                  background-position: 60% 40%;
+                }
+                80% {
+                  background-position: 80% 60%;
+                }
+              }
+              
+
+        </style>
+        
+
+    </head>
+    <body>
+
+        <div class="i-carbon-logo-github" />
+        <section class="smart_accordian-section">
+            <div class="container">
+              <div class="sec_title">Investment Strategy</div>
+              <div class="accourdian">
+                <div class="accordian-item item1">
+                  <div class="accordian-link">
+                    Warren buffet makes strategy of investment easy but effective
+                    <i class="icon ion-md-add">+</i>
+                  </div>
+                  <div class="answer">
+                    <p>Warren Buffett, known as the "Oracle of Omaha," is widely regarded as one of the most successful investors of all time. One of his simplest investment strategies is to focus on buying quality companies with a long track record of stability, growth, and profitability. He looks for businesses that have a competitive advantage and are able to maintain or grow their market share over time.
+
+                        Another key aspect of his investment strategy is to focus on the long-term. He believes in holding onto stocks for many years, rather than trying to make quick profits through short-term trading. He also avoids over-diversification, opting to focus on a smaller number of well-selected stocks, rather than spreading his investments thinly across many companies.
+                        
+                        Finally, Buffett is known for his value-oriented approach to investing. He looks for stocks that are undervalued relative to their earnings and growth potential, and he has a great deal of patience when it comes to waiting for these stocks to reach their full potential.
+                        
+                        In short, Warren Buffett's simplest investment strategy can be summarized as:
+                        
+                        Invest in quality companies with a competitive advantage
+                        Focus on the long-term and avoid over-diversification
+                        Look for undervalued stocks with strong earnings and growth potential.</p>
+                  </div>
+                </div>
+                <div class="accordian-item item2">
+                  <div class="accordian-link">
+                    trying to get High returns from Mutual funds Look out for this things
+                    <i class="icon ion-md-add">+</i>
+                  </div>
+                  <div class="answer">
+                    <p>Mutual funds can be an effective way for individual investors to achieve high returns, as they allow you to pool your money with other investors to buy a diversified portfolio of stocks, bonds, or other assets. Here are some strategies that can help you get high returns with mutual funds:
+
+                        <br><br><br><strong>1.Diversification</strong>: One of the key benefits of investing in mutual funds is diversification, which helps to minimize your investment risk. When investing in a mutual fund, you are effectively investing in a large number of different stocks, bonds, or other assets, reducing your exposure to any single company or sector.
+                        
+                        <br><br><strong>2.Investment horizon:</strong> Your investment horizon is the length of time you plan to hold onto your investment. If you have a long-term investment horizon, you can afford to take on more risk, as you have more time to recover from market downturns. On the other hand, if you have a shorter investment horizon, you may want to consider a more conservative investment strategy.
+                        
+                        <br><br><strong>3.Risk tolerance:</strong> Consider your risk tolerance when selecting mutual funds. Some funds are more aggressive and invest in riskier assets, while others are more conservative and invest in safer assets like bonds. Your investment risk tolerance will depend on your investment goals, investment horizon, and financial situation.
+                        
+                        <br><br><strong>4.Fund manager expertise:</strong> Choose mutual funds with a proven track record of outperforming the market. Look for funds managed by experienced professionals with a deep understanding of the market and a history of successful investment decisions.
+                        
+                        <br><br><strong>5.Fund expenses:</strong> Consider the expenses associated with mutual funds, such as management fees, administrative expenses, and other charges. High expenses can eat into your investment returns, so it's important to choose funds with low expenses.
+                        
+                       <br><br><strong>6.Regular review:</strong> Regularly review and monitor your mutual fund investments to ensure that they are meeting your investment goals. If your investment goals change, adjust your portfolio accordingly.
+                        <br><br><br>
+                        By following these strategies, you can increase your chances of getting high returns with mutual funds. However, it's important to remember that investing always involves some level of risk, and there is no guarantee of high returns.</p>
+                  </div>
+                </div>
+                <div class="accordian-item item3">
+                  <div class="accordian-link">
+                    Some reasons How Rich Dad Poor Dad can make You Rich 
+                    <i class="icon ion-md-add">+</i>
+                  </div>
+                  <div class="answer">
+                    <p>"Rich Dad Poor Dad" is a book by Robert Kiyosaki that advocates for financial education and financial independence. The book provides several investment ideas that are meant to help individuals build wealth and achieve financial freedom. Here are some of the key investment ideas from "Rich Dad Poor Dad":<br><br>
+
+                        <br><strong>1.Invest in assets, not liabilities:</strong> Kiyosaki advocates for investing in assets that generate income, such as rental properties, stocks, or small businesses, rather than liabilities that consume income, such as consumer goods or credit card debt.
+                        
+                       <br><br><strong>2. Consider real estate:</strong> Kiyosaki believes that real estate can be a powerful tool for building wealth, especially rental properties that generate passive income. He recommends considering real estate as an investment option, especially if you have some experience or knowledge in the area.
+                        
+                       <br><br><strong>3.Focus on cash flow:</strong> According to Kiyosaki, cash flow is the lifeblood of your financial health. He emphasizes the importance of focusing on generating positive cash flow from your investments, rather than just focusing on the appreciation of your assets.
+                        
+                       <br><br><strong>4.Embrace entrepreneurship:</strong> Kiyosaki believes that entrepreneurship is a key driver of wealth creation and financial independence. He encourages individuals to consider starting their own business or investing in small businesses, as a way to generate additional income streams.
+                        
+                       <br><br><strong>5.Take calculated risks:</strong> Kiyosaki encourages individuals to embrace risk-taking in their investments, as long as they have a clear understanding of the potential rewards and risks involved. He advises against taking on unnecessary risks, but encourages taking calculated risks that have the potential to generate high returns.<br><br><br>
+                        
+                        <br>These are some of the key investment ideas from "Rich Dad Poor Dad." By incorporating these ideas into your investment strategy, you may be able to increase your chances of building wealth and achieving financial freedom. However, it's important to remember that investing always involves some level of risk, and there is no guarantee of high returns.</p>
+                  </div>
+                </div>
+                <div class="accordian-item item4">
+                  <div class="accordian-link">
+                    how to be a better investor and how to enter the Market
+                    <i class="icon ion-md-add">+</i>
+                  </div>
+                  <div class="answer">
+                    <p>Here are some books that can help you learn about money and improve your investing skills:
+
+                        <br><br><strong>"The Intelligent Investor" by Benjamin Graham:</strong> This classic book is considered a must-read for anyone interested in investing. It provides a comprehensive overview of the principles of value investing and offers practical advice on how to make informed investment decisions.
+                        
+                        <br><br><strong>"The Little Book of Common Sense Investing" by John C. Bogle:</strong> This book provides an accessible introduction to the principles of index investing and the benefits of a low-cost, passive investment strategy.
+                        
+                       <br><br><strong> "The Millionaire Next Door" by Thomas J. Stanley and William D. Danko:</strong> This book provides a fascinating look at the characteristics and behaviors of real-life millionaires and offers practical advice on how to accumulate wealth over time.
+                        
+                        <br><br><strong>"The Psychology of Money" by Morgan Housel:</strong> This book explores the psychological and emotional aspects of money and offers insights into why people make certain financial decisions.
+                        
+                       <br><br><strong> "Your Money or Your Life" by Vicki Robin and Joe Dominguez:</strong> This book provides a comprehensive guide to personal finance and offers practical tips on how to get out of debt, increase your savings, and build wealth over time.
+                       <br>
+                       <br>
+                       <br>
+                        
+                        In addition to reading books, there are other steps you can take to improve your investing skills:
+                        
+                        <br><br><strong>Start small:</strong> Consider starting with a small investment and gradually increasing your investment as you gain experience and confidence.
+                        
+                        <br><br><strong>Diversify your portfolio:</strong> Spread your investments across multiple assets, such as stocks, bonds, and real estate, to reduce risk and increase potential returns.
+                        
+                        <br><br><strong>Stay informed:</strong> Stay up-to-date on market trends and economic news, and consider subscribing to financial publications or attending investment workshops.
+                        
+                        <br><br><strong>Seek professional advice:</strong> Consider working with a financial advisor or investment professional to help guide your investment decisions and ensure that your portfolio is aligned with your financial goals.<br>
+                        <br>
+                        <br>
+                        
+                        By taking these steps, you can build your knowledge of personal finance and investing, and increase your chances of success in the markets.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="{{request.META.HTTP_REFERER}}">Go back</a>
+          </section>
+          
+
+
+          <script type="text/javascript">
+
+            $(document).ready(function () {
+                let cards = document.querySelectorAll(".accordian-item");
+                [...cards].forEach((card) => {
+                  card.addEventListener("click", function () {
+                    $(".accordian-item .answer")
+                      .not($(this).find(".answer"))
+                      .removeClass("open");
+                    $(".accordian-item i")
+                      .not($(this).find("i"))
+                      .removeClass("ion-md-remove");
+                    $(this).find(".accordian-link , .answer").toggleClass("open");
+                    $(this).find("i").toggleClass("ion-md-remove");
+                  });
+                });
+              });
+              
+
+          </script>
+
+
+
+
+
+
+
+
+
+
+    </body>
+    </html

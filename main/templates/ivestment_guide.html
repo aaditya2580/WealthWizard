@@ -1,0 +1,330 @@
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <style>
+            body{
+                font-family: 'Jost', sans-serif;
+                margin-top:20px;
+                background-color: #2a2b2f;
+                }
+                #form{
+                  color:white;
+                }
+                hr{
+                  color:white;
+                }
+                h3{
+                  text-align:center;
+                  color: white;
+                }
+                .radius-10 {
+                    border-radius: 10px !important;
+                }
+                
+                .border-info {
+                    border-left: 5px solid  #0dcaf0 !important;
+                }
+                .border-danger {
+                    border-left: 5px solid  #fd3550 !important;
+                }
+                .border-success {
+                    border-left: 5px solid  #15ca20 !important;
+                }
+                .border-warning {
+                    border-left: 5px solid  #ffc107 !important;
+                }
+                
+                
+                .card {
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    min-width: 0;
+                    word-wrap: break-word;
+                    background-color: #fff;
+                    background-clip: border-box;
+                    border: 0px solid rgba(0, 0, 0, 0);
+                    border-radius: .25rem;
+                    margin-bottom: 1.5rem;
+                    box-shadow: 0 2px 6px 0 rgb(218 218 253 / 65%), 0 2px 6px 0 rgb(206 206 238 / 54%);
+                }
+                .bg-gradient-scooter {
+                    background: #17ead9;
+                    background: -webkit-linear-gradient( 
+                45deg
+                 , #17ead9, #6078ea)!important;
+                    background: linear-gradient( 
+                45deg
+                 , #17ead9, #6078ea)!important;
+                }
+                .widgets-icons-2 {
+                    width: 56px;
+                    height: 56px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: #ededed;
+                    font-size: 27px;
+                    border-radius: 10px;
+                }
+                .rounded-circle {
+                    border-radius: 50%!important;
+                }
+                .text-white {
+                    color: #fff!important;
+                }
+                .ms-auto {
+                    margin-left: auto!important;
+                }
+                .bg-gradient-bloody {
+                    background: #f54ea2;
+                    background: -webkit-linear-gradient( 
+                45deg
+                 , #f54ea2, #ff7676)!important;
+                    background: linear-gradient( 
+                45deg
+                 , #f54ea2, #ff7676)!important;
+                }
+                
+                .bg-gradient-ohhappiness {
+                    background: #00b09b;
+                    background: -webkit-linear-gradient( 
+                45deg
+                 , #00b09b, #96c93d)!important;
+                    background: linear-gradient( 
+                45deg
+                 , #00b09b, #96c93d)!important;
+                }
+                
+                .bg-gradient-blooker {
+                    background: #ffdf40;
+                    background: -webkit-linear-gradient( 
+                45deg
+                 , #ffdf40, #ff8359)!important;
+                    background: linear-gradient( 
+                45deg
+                 , #ffdf40, #ff8359)!important;
+                }
+                p{
+                  color:white;
+                  text-align:center;
+                }
+                .btn {
+                    cursor: pointer;
+                    background-color: #000;
+                    width: 330px;
+                    height: 64px;
+                    line-height: 64px;
+                    position: absolute;
+                    z-index: 0;
+                    box-shadow: 0px 0px 17px 1px rgba(0, 0, 0, 0.34);
+                    span {
+                      color: #fff;
+                      display: block;
+                      padding-left: 35px;
+                      text-transform: uppercase;
+                      font: bold 18px/66px Arial;
+                      transform: scaleX(0.6);
+                      letter-spacing: 3px;
+                      transform-origin: center left;
+                      transition: color 0.3s ease;
+                      position: relative;
+                      z-index: 1;
+                    }
+                    em {
+                      position: absolute;
+                      height: 1px;
+                      background: #fff;
+                      width: 47%;
+                      right: 23px;
+                      top: 50%;
+                      transform: scaleX(0.25);
+                      transform-origin: center right;
+                      transition: all 0.3s ease;
+                      z-index: 1;
+                    }
+                    &:before, &:after {
+                      content: '';
+                      background: #fff;
+                      height: 50%;
+                      width: 0;
+                      position: absolute;
+                      transition: .3s cubic-bezier(.785,.135,.15,.86);
+                    }
+                    &:before {
+                      top: 0;
+                      left: 0;
+                      right: auto;
+                    }
+                    &:after {
+                      bottom: 0;
+                      right: 0;
+                      left: auto;
+                    }
+                    &:hover {
+                      &:before {
+                        width: 100%;
+                        right: 0;
+                        left: auto;
+                      }
+                      &:after {
+                        width: 100%;
+                        left: 0;
+                        right: auto;
+                      }
+                      span {
+                        color: #000;
+                      }
+                      em {
+                        background: #000;
+                        transform: scaleX(1);
+                      }
+                    }
+                  }
+        </style>
+    </head>
+    <body>
+        <p class="h3">Financial investment Distributor Calculator<p>
+            <hr>
+          <div class="container" id="form">
+                <form>
+                  <div class="form-group">
+              <label class="mb-0" for="salary">Salary</label>
+              <input class="form-control" type="text" id="salary" name="salary"  onchange="investment()"required>
+                  </div>
+                  <br>
+                  <div class="form-group">
+              <label class="mb-0" for="expenses">Age</label>
+              <input class="form-control" type="text" id="age" name="age" onchange="Investment()" required>
+                  </div>
+
+            </form>
+          </div>
+          <br>
+          <br>
+          <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+          <h3>DashBoard </h3>
+          <hr class="hr hr-blurry" />
+         
+          <div class="container">
+          <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4">
+                 <div class="col">
+               <div class="card radius-10 border-start border-0 border-3 border-info">
+                <div class="card-body">
+                  <div class="d-flex align-items-center">
+                    <div>
+                      <p class="mb-0 text-secondary"> Personal and necessory things</p>
+                      <h4 class="my-1 text-info" id="necessity"></h4>
+                      <p class="mb-0 font-13" id="personal"> </p>
+                    </div>
+                    <div class="widgets-icons-2 rounded-circle bg-gradient-scooter text-white ms-auto"><i class="fa fa-shopping-cart"></i>
+                    </div>
+                  </div>
+                </div>
+               </div>
+               </div>
+               <div class="col">
+              <div class="card radius-10 border-start border-0 border-3 border-danger">
+                 <div class="card-body">
+                   <div class="d-flex align-items-center">
+                     <div>
+                       <p class="mb-0 text-secondary">Total Investment </p>
+                       <h4 class="my-1 text-danger" id="invest"></h4>
+                       <p class="mb-0 font-13"></p>
+                     </div>
+                     <div class="widgets-icons-2 rounded-circle bg-gradient-bloody text-white ms-auto"><i class="fa fa-dollar"></i>
+                     </div>
+                   </div>
+                 </div>
+              </div>
+              </div>
+              <div class="col">
+              <div class="card radius-10 border-start border-0 border-3 border-success">
+                 <div class="card-body">
+                   <div class="d-flex align-items-center">
+                     <div>
+                       <p class="mb-0 text-secondary">Stocks</p>
+                       <h4 class="my-1 text-success" id="stocks"></h4>
+                       <p class="mb-0 font-13"></p>
+                     </div>
+                     <div class="widgets-icons-2 rounded-circle bg-gradient-ohhappiness text-white ms-auto"><i class="fa fa-bar-chart"></i>
+                     </div>
+                   </div>
+                 </div>
+              </div>
+              </div>
+              <div class="col">
+              <div class="card radius-10 border-start border-0 border-3 border-warning">
+                 <div class="card-body">
+                   <div class="d-flex align-items-center">
+                     <div>
+                       <p class="mb-0 text-secondary">Mutual Funds</p>
+                       <h4 class="my-1 text-warning" id="mutual"></h4>
+                       <p class="mb-0 font-13"></p>
+                     </div>
+                     <div class="widgets-icons-2 rounded-circle bg-gradient-blooker text-white ms-auto"><i class="fa fa-users"></i>
+                     </div>
+                   </div>
+                 </div>
+              </div>
+              </div> 
+            </div>
+          </div>
+          <div>
+            <a href="{{request.META.HTTP_REFERER}}">Go back</a>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+
+
+
+
+
+        <script>
+            function investment() {
+                var salary = parseFloat(document.querySelector("#salary").value);
+                var age = parseInt(document.querySelector("#age").value);
+                var stocksPercentage = 0;
+                var necessities = salary * 0.5;
+                var personalSpending = salary * 0.3;
+                var savingsInvestments = salary * 0.2;
+                if (age < 30) {
+                  stocksPercentage = 80;
+                } else if (age >= 30 && age < 50) {
+                  stocksPercentage = 60;
+                } else {
+                  stocksPercentage = 40;
+                }
+              
+                let mutualFundsPercentage = 100 - stocksPercentage;
+                var stocksAmount = savingsInvestments * (stocksPercentage / 100);
+                var mutualFundsAmount = savingsInvestments * (mutualFundsPercentage / 100);
+
+              
+                necessities = necessities.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                personalSpending = personalSpending.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                savingsInvestments = savingsInvestments.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                var mutual = mutualFundsAmount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                var stocks = stocksAmount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+              
+                document.querySelector("#necessity").innerHTML = `you should spend ${necessities} amount `;
+                document.querySelector("#personal").innerHTML = `your personal spending should be= ${personalSpending} `;
+                document.querySelector("#invest").innerHTML = `your savings and investments should be= ${savingsInvestments} `;
+                document.querySelector("#stocks").innerHTML = `buy stocks of =${stocks} amount`;
+                document.querySelector("#mutual").innerHTML = `buy mutual funds of =${mutual} amount`;
+              }
+
+ 
+        </script>
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </body>
+    </html>
