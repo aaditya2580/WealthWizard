@@ -19,9 +19,9 @@ After the installation has completed, you can verify your Django installation by
 
 the Application can do following task. Register user Log in user Perform CRUD Operations
 
-Step for setup
+*********************Step for setup******************************
 
-cd File
+cd MyApp
 
 pip3 install -r requirements.txt
 
